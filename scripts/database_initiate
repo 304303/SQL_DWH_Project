@@ -1,0 +1,10 @@
+--creating database and using it
+create database SQL_DWH;
+use SQL_DWH;
+
+--create schemas
+create schema bronze;
+Go
+create schema silver;
+Go
+create schema gold;
