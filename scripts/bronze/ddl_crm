@@ -1,0 +1,40 @@
+IF object_id('bronze.crm_cst_info','u') is not null
+drop table bronze.crm_cst_info;
+
+create table bronze.crm_cst_info (
+cst_id int,
+cst_key nvarchar(50),
+cst_firstname nvarchar(50),
+cst_lastname nvarchar(50),
+cst_marital_status nvarchar(20),
+cst_gndr nvarchar(20),
+cst_create_date date
+);
+
+IF object_id('bronze.crm_prd_info','u') is not null
+drop table bronze.crm_prd_info;
+
+create table bronze.crm_prd_info (
+prd_id int,
+prd_key nvarchar(50),
+prd_name nvarchar(50),
+prd_cost int,
+prd_line nvarchar(20),
+prd_start_date date,
+prd_end_date date,
+);
+
+IF object_id('bronze.crm_sales_details','u') is not null
+drop table bronze.crm_sales_details;
+
+create table bronze.crm_sales_details (
+sls_ord_num nvarchar(50),
+sla_prd_key nvarchar(50),
+sls_cust_id int,
+sls_ord_dt int,
+sls_ship_dt int,
+sls_due_dt int,
+sls_sales int,
+sla_quan int,
+sls_price int
+);
