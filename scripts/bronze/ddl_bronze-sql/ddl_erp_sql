@@ -1,0 +1,26 @@
+IF object_id('bronze.erp_cust_az12','u') is not null
+drop table bronze.erp_cust_az12;
+
+create table bronze.erp_cust_az12(
+Cid nvarchar(50), 
+Birth_Date date,
+Gen nvarchar(20)
+);
+
+IF object_id('bronze.erp_loc_a101','u') is not null
+drop table bronze.erp_loc_a101;
+
+create table bronze.erp_loc_a101(
+Cid nvarchar(50), 
+Country nvarchar(50)
+);
+
+IF object_id('bronze.erp_px_cat_g1v2','u') is not null
+drop table bronze.erp_px_cat_g1v2;
+
+create table bronze.erp_px_cat_g1v2(
+Id nvarchar(50),
+Categorey nvarchar(50),
+Sub_Categorey nvarchar(50),
+Maintenance nvarchar(50)
+);
